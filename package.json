@@ -1,0 +1,42 @@
+{
+  "name": "bloglist_server",
+  "version": "1.0.0",
+  "description": "Backend for bloglist",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
+    "lint": "eslint .",
+    "testerror": "echo \"Error: no test specified\" && exit 1",
+    "start:test": "cross-env NODE_ENV=test node index.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon index.js"
+  },
+  "author": "Carolina Alejandra Graniel García",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "express-jsonwebtoken": "^1.0.9",
+    "express-jwt": "^8.4.1",
+    "jsonwebtoken": "^9.0.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^7.1.0",
+    "mongoose-unique-validator": "^4.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^8.40.0",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "supertest": "^6.3.3"
+  },
+  "Jest": {
+    "testEnvironment": "node",
+    "globalTeardown": "./tests/teardown.js"
+  }
+}
